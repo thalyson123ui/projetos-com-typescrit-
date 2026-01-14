@@ -1,9 +1,31 @@
 class Doce {
-  constructor(public sabor: string, public preco: number) {}
+  sabor: string;
+  preco: number;
+
+  constructor(sabor: string, preco: number) {
+    this.sabor = sabor;
+    this.preco = preco;
+  }
+
+  mostrarInfo(): void {
+    console.log(`Doce de ${this.sabor} custa R$${this.preco.toFixed(2)}`);
+  }
+
+  aplicarDesconto(percentual: number): void {
+    this.preco -= this.preco * (percentual / 100);
+  }
 }
 
+// Criando objetos
 const brigadeiro = new Doce("chocolate", 5);
 const beijinho = new Doce("coco", 4);
 
-console.log(`O sabor do brigadeiro é ${brigadeiro.sabor} e o preço é R$${brigadeiro.preco}`);
-console.log(`O sabor do beijinho é ${beijinho.sabor} e o preço é R$${beijinho.preco}`);
+// Exibindo informações
+brigadeiro.mostrarInfo();
+beijinho.mostrarInfo();
+
+// Aplicando desconto
+brigadeiro.aplicarDesconto(10);
+
+console.log("Após desconto:");
+brigadeiro.mostrarInfo();

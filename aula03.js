@@ -3,9 +3,21 @@ var Doce = /** @class */ (function () {
         this.sabor = sabor;
         this.preco = preco;
     }
+    Doce.prototype.mostrarInfo = function () {
+        console.log("Doce de ".concat(this.sabor, " custa R$").concat(this.preco.toFixed(2)));
+    };
+    Doce.prototype.aplicarDesconto = function (percentual) {
+        this.preco -= this.preco * (percentual / 100);
+    };
     return Doce;
 }());
+// Criando objetos
 var brigadeiro = new Doce("chocolate", 5);
 var beijinho = new Doce("coco", 4);
-console.log("O sabor do brigadeiro \u00E9 ".concat(brigadeiro.sabor, " e o pre\u00E7o \u00E9 R$").concat(brigadeiro.preco));
-console.log("O sabor do beijinho \u00E9 ".concat(beijinho.sabor, " e o pre\u00E7o \u00E9 R$").concat(beijinho.preco));
+// Exibindo informações
+brigadeiro.mostrarInfo();
+beijinho.mostrarInfo();
+// Aplicando desconto
+brigadeiro.aplicarDesconto(10);
+console.log("Após desconto:");
+brigadeiro.mostrarInfo();
