@@ -7,7 +7,7 @@ interface Usuario {
 }
 
 // Exemplo de Classe
-class Pessoa {
+class PessoaClass {
   nome: string;
   idade: number;
 
@@ -30,19 +30,19 @@ function obterPrimeiro<T>(lista: T[]): T | undefined {
 }
 
 // Exemplo de uso
-const usuario1: Usuario = {
+const usuario1Data: Usuario = {
   id: 1,
   nome: "João Silva",
   email: "joao@email.com",
   ativo: true
 };
 
-const pessoa = new Pessoa("Maria", 25);
-console.log(pessoa.apresentar());
-console.log(usuario1);
+const pessoaInstance = new PessoaClass("Maria", 25);
+console.log(pessoaInstance.apresentar());
+console.log(usuario1Data);
 
-const numeros = [1, 2, 3, 4, 5];
-console.log("Primeiro número:", obterPrimeiro(numeros));
+const numerosArray = [1, 2, 3, 4, 5];
+console.log("Primeiro número:", obterPrimeiro(numerosArray));
 
-const palavras = ["TypeScript", "JavaScript", "Python"];
-console.log("Primeira palavra:", obterPrimeiro(palavras));
+const palavrasArray = ["TypeScript", "JavaScript", "Python"];
+console.log("Primeira palavra:", obterPrimeiro(palavrasArray));
