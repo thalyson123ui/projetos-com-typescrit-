@@ -22,7 +22,14 @@ function atualizarStatus(pedido: Pedido, novoStatus: StatusPedido): void {
 
 // Exemplo de uso
 
-// Usando o enum
+// Criando um pedido inicial
+let pedido1: Pedido = {
+  id: 1,
+  produto: "Notebook",
+  status: StatusPedido.Pendente
+};
+
+// Usando o enum para atualizar o status
 atualizarStatus(pedido1, StatusPedido.Processando);
 atualizarStatus(pedido1, StatusPedido.Enviado);
 atualizarStatus(pedido1, StatusPedido.Entregue);
