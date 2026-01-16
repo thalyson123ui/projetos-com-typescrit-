@@ -20,12 +20,7 @@ function atualizarStatus(pedido: Pedido, novoStatus: StatusPedido): void {
   console.log(`Pedido ${pedido.id} agora está ${pedido.status}`);
 }
 
-// Criando um pedido
-const pedido1: Pedido = {
-  id: 1,
-  produto: "Notebook",
-  status: StatusPedido.Pendente
-};
+// Exemplo de uso
 
 // Usando o enum
 atualizarStatus(pedido1, StatusPedido.Processando);
