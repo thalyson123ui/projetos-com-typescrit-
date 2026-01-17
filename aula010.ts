@@ -15,3 +15,4 @@ varIndefinida = undefined;
 
 console.log(minhaVar);
 console.log(varIndefinida);
+console.log(varNumero);
