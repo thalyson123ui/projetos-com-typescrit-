@@ -1,5 +1,9 @@
+// null - undefined - unknown
+
+// null - tipo nulo
+// unknown - tipo desconhecido
 let vnome: string|null;
-vnome =null;
+vnome = "thalyson";
 console.log(vnome);
 
 let vnome2: any;
