@@ -1,13 +1,10 @@
 // null - undefined - unknown
-
 // null - tipo nulo
 // unknown - tipo desconhecido
-let vnome: string|null;
+var vnome;
 vnome = "thalyson";
 console.log(vnome);
-
-let vnome2: any;
+var vnome2;
 console.log(vnome2);
-
-let vnome3: unknown;
+var vnome3;
 console.log(vnome3);
